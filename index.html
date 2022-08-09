@@ -39,12 +39,27 @@
                 text-align: center;
                 justify-content: space-around;
             }
+            .presenca {
+                background-color: lightcoral;
+                display: flex;
+                flex-direction: column;
+            }
         }
         
         @media (max-width: 600px) {
             .Desktop {
                 display: none;
             }
+        }
+        button {
+            max-width: 100px;
+            margin: 32px auto;
+            padding: 8px;
+            text-align: center;
+            justify-content: center;
+        }
+        input {
+            margin-bottom: 8px;
         }
         /* .a:-webkit-any-link { 
         color: -webkit-link;
@@ -115,19 +130,27 @@
         <div class="sessoes">
             <div id="Two" class="noivos">
                 addasuidjasuidjas
-            </div>
+        </div>
 
-            <div id="Four" class="presenca">
-                <form>
-                    <!-- nome completo -->
-                    <input type="text">
-                     <!-- telefone -->
-                    <input type="text">
-                    <!-- radio button -->
-                    <input type="radio">
-                    <button type="menu">Confirmar</button>
-                </form>
+        <form method="POST" id="Four" class="presenca">
+            <h2>Confirme sua presença</h2>
+            <!-- nome completo -->
+            <div>
+                <input id="nome" type="text" minlength="8" placeholder="Nome Completo ...">
             </div>
+            <!-- telefone -->
+            <div>
+                <input id="telefone" type="text" pattern="\([0-9]{2}\) [0-9]{5}\-[0-9]{4}" maxlength="15"  placeholder="Telefone ...">
+            </div>
+            <!-- radio button -->
+            <div>
+                <input id="sozinho" type="radio" name="opcoesConfirmacao">
+                <label for="sozinho">Confirmo apenas minha presença</label>
+                <input id="familia" type="radio" name="opcoesConfirmacao">
+                <label for="sozinho">Todos a quem o convite foi destinado</label>
+            </div>
+            <button type="menu">Confirmar</button>
+        </form>
 
             <div id="Five" class="contagem">
                 addasuidjasuidjas
