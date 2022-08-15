@@ -1,132 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- TODO: colocar um texto de verdade -->
-<!-- TODO: ajustar tamanho das imagens das reder -->
-<!-- TODO: adicionar mais redes -->
-
+<html lang="pt-br">
 <head>
+    <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculo</title>
+    <title>Ana Giulia & Adriano</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        li {
-            font-size: 16px;
+<style>
+        @media (min-width: 600px) {
+            .Mobile {
+                display: none;
+            }
+            .Desktop {
+                display: flex;
+                background-color: rgba(192, 165, 93, 0.959);
+                justify-content: space-between;
+                cursor: pointer;
+                cursor: default;
+                object-fit: cover;
+                
+                
+            }
+            .Desktop a{
+                text-decoration: none;
+                color: #000000;
+                font-family: serif;
+                font-size: 15px;
+                
+            }
+            .img{
+                border-radius: 50%;
+                border: 5px rgba(192, 165, 93, 0.959)solid;
+            }
+            .body {
+                display: block;
+            }
+           
+            .title{
+                
+                font-size: 30px;
+                font-family: 'Brush Script MT, Brush Script Std', cursive
+                color: rgba(192, 165, 93, 0.959);
+            }
+            .noivos{
+                margin-bottom: 0;
+                height: 530px;
+                
+            }
+            .Desktop h1{
+                color: #000000;
+                font-family: serif;
+            }
+            
+            .logo {
+                flex: 1
+            }
+            .topicos {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: space-around; 
+                color: #000000; 
+            }
+            a {
+                list-style: none;
+            }
+            li {
+                justify-content: space-between;
+                gap: 8rem;
+            }
+            .sessoes {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                margin: 32px auto;
+                text-align: center;
+                justify-content: space-around;
+             
+        
+            }
+            .presenca {
+                background-color: rgba(192, 165, 93, 0.959);
+                display: flex;
+                flex-direction: column;
+            }
         }
-        p {
-            font-size: 14px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        
+        @media (max-width: 600px) {
+            .Desktop {
+                display: none;
+            }
         }
-        .informacoes {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 16px;
-            border-bottom: solid 2px black;
+        button {
+            max-width: 100px;
+            margin: 32px auto;
+            padding: 8px;
+            text-align: center;
+            justify-content: center;
         }
-        .foto-de-perfil {
-            width: 64px;
-            border-radius: 50%;
-            margin-right: 16px;
+        input {
+            margin-bottom: 8px;
         }
-        .secao {
-            padding-bottom: 32px;
-            border-bottom: solid 1px black;
-        }
-        .dados {
-            padding-top: 8px;
-            flex: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-    </style>
+        
+</style>
+    
 </head>
 <body>
-    <h2> Curriculo Adriano</h2>
-    <div class="informacoes">
-        <img src="imagens/foto.jpg" alt="imagens/alternativa.jpg" class="foto-de-perfil" >
-        <div class="dados">
-            <div>
-                <span id="Nome" ><strong>Nome:</strong> Adriano Monteiro</span> 
-                &nbsp;    
-                <span id="Idade"><strong>idade:</strong> 21</span>
-                &nbsp;
-                <span><strong>Telefone:</strong> + 55 21 97581-5932 </span>
+        <header class="Mobile">
+            <h1> AJ</h1>
+            <nav id="nav">
+                <button id="btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+                <ul id="menu">
+                    <li><a href="#Two"><strong>OS NOIVOS</strong> </a></li>
+                    <li><a href="#Four"><strong>CONFIRMAR PRESENÇA</strong></a></li>
+                    <li><a href="#Five"><strong>CONTAGEM REGRESSIVA</strong></a></li>
+                    <li><a href="#six"><strong>LOCALIZAÇÃO</strong></a></li>
+                    <li><a href="./Gifts/gifts.html"><strong>PRESENTES</strong></a></li> 
+                </ul>
+            </nav>
+        </header>
+        <header class="Desktop">
+            <a id="logo" class="logo" href="#"><h1>Ana Giulia & Adriano</h1></a>
+            <nav class="topicos">
+                <a href="#Two"><strong><li>OS NOIVOS</li></strong></a>
+                <a href="#Four"><strong><li>CONFIRMAR PRESENÇA</li></strong></a>
+                <a href="#Five"><strong><li>CONTAGEM REGRESSIVA</li></strong></a>
+                <a href="#Six"><strong><li>ENDEREÇO</li></strong></a>
+                <a href="./Gifts/gifts.html"><li><strong>PRESENTES</strong></li></a>
+            </nav>
+            
+        </header>
+        
+        <div class="sessoes">
+            <div id="Two" class="noivos">   
+        </div>
+        <div class="img">
+            <div id="Two" class="fotos">
+            <img src="noivos.jpg" width="400" height="500">
+        </div>
+
+        <div class="apresentacao">
+            <div id="Tree" class="sobre">
+                <p>Bem-vindos! Queridos amigos e familiares,<br> o dia mais especial de nossas vidas <br>
+                    está chegando e gostariamos <br>de contar com a presença de todos vocês.</p>
             </div>
-            <span>Rua Engenheiro Eduarto Parisot, N° 23, Bairro: Cascadura</span>
-            <span>
-                <a href =adrianoluizsud@gmail.com>
-                    Email: Adrianoluizsud@gmail.com
-                </a>
-            </span>
-        </div> 
-    </div>            
-    <div class="secao">
-        <h3> Dados profissionais</h3>
-        <ul> 
-            <li> 
-                CLM Decor - (2018 / 2019)
-                <p>
-                    Auxiliar de vendas e colocação
-                    Apoio no atendimento ao cliente, vendas e pós venda. Rotinas administrativas, como confecção de orçamentos, emissão de notas, envio de e-mails e etc. Apoio ao time de instalação de produtos, quando necessário. 
+        <div class ="title">
+            <h1>Os noivos</h1>
+        </div>
 
-                </p>
-            </li>
-            &nbsp;
-            <li> RV Digital –  (2021 – 2022)
-                <p>
-                    Atendimento e suporte ao cliente
-                    Responsável por auxiliar o cliente na resolução de problemas em geral, auxiliar o consultor com informações e envio de materiais, responsável pela prospecção de novos clientes, acompanhamento de vendas e rotinas administrativas, como confecção e manutenção de planilhas, controle de vendas e faturamentos, envio de E-mails e etc.  
+        <form method="POST" id="Four" class="presenca">
+            <h2>Confirme sua presença</h2>
+            <!-- nome completo -->
+            <div>
+                <input id="nome" type="text" minlength="8" placeholder="Nome Completo ...">
+            </div>
+            <!-- telefone -->
+            <div>
+                <input id="telefone" type="text" pattern="\([0-9]{2}\) [0-9]{5}\-[0-9]{4}" maxlength="15"  placeholder="Telefone ...">
+            </div>
+            <!-- radio button -->
+            <div>
+                <input id="sozinho" type="radio" name="opcoesConfirmacao">
+                <label for="sozinho">Confirmo apenas minha presença</label>
+                <input id="familia" type="radio" name="opcoesConfirmacao">
+                <label for="sozinho">Todos a quem o convite foi destinado</label>
+            </div>
+            <button type="menu">Confirmar</button>
+        </form>
 
-                </p>
-            </li>
-            &nbsp;
-                </p>
-             </li>
-        </ul>
-             </div> 
-                 <div class = "secao">
-                    <h3>Idiomas</h3>
-                    <ul>
-                        <li>
-                            BYU Idaho (Pathway worldwide) – Inglês intermediário (escrita / leitura/ conversação)<p>
+            <div id="Five" class="contagem">
+                addasuidjasuidjas
+            </div>
 
-                            </p>
-                            Intercâmbio – Espanhol fluente (escrita / leitura / conversação)
+            <div id="Six" class="endereco">
+                addasuidjasuidjas
+            </div>
+        </div>
+
+        </div>
+      
+    
+        
+       
+
+    
+        
+
+    </header>
+   
 
 
-                        </li>
 
-                    </ul>
-
-                 </div>
-</div>
-    <div class="secao">
-        <h3> Escolaridade </h3>
-        <ul>
-            <li>Evolute – Hardware – 20hr (2019) </li>
-            <br>
-            <li>Programador Full Stack – Mais1Code - 40hr (2022)  </li>
-            <br>
-            <li>C.E.M.N.C.S – Ensino médio completo (2018)</li>
-        </ul>
     </div>
-    <div>
-        <h3> Redes </h3>
-        <a href="https://github.com/Drianof">
-            <img src="imagens/github.png" alt="GITHUB" width="32px"/>
-        </a>
-        <a href="https://www.linkedin.com/in/adriano-monteiro-3b6468164/">
-            <img src="imagens/linkedin.png" alt="GITHUB" width="32px"/>
-        </a>
-        <a href="https://web.facebook.com/Adriano.Monteiro171">
-            <img src="imagens/facebook.png" alt="GITHUB" width="32px"/>
-        </a>
-        <a href="https://web.whatsapp.com/">
-            <img src="imagens/whatsapp.png" alt="GITHUB" width="32px"/>
-        </a>
-    </div>
+        
+    
+
+
+
+
+
+   
+
+    
 </body>
 </html>
