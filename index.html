@@ -7,6 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Giulia & Adriano</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        function postToGoogle() {
+            let field1 = $("#nome").val();
+            let field2 = $("#telefone").val();
+            let field3 = $("#sozinho").val();
+            let field4 = $("#familia").val();
+
+            $.ajax({
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScqz-eEUvvCAJHLhP40kmwAsLPKxUzdytU3ipt51BMtxEi19g/formResponse",
+                
+                data: {
+                    "entry.1931910532": field1,
+                    "entry.1160971757": field2,
+                    "entry.1411523161": "familia"
+                },
+                type: "POST",
+                dataType: "xml",
+                success: function (d) {
+                    $('#Four').trigger('reset');
+                    alert("Informações enviadas com sucesso!");
+                },
+                error: function (x, y, z) {
+                    $('#Four').trigger('reset');
+                }
+            });
+            return false;
+        }
+        
+    </script>
 <style>
         @media (min-width: 600px) {
             .Mobile {
@@ -151,24 +183,27 @@
             <h1>Os noivos</h1>
         </div>
 
-        <form method="POST" id="Four" class="presenca">
+        <form method="POST" onsubmit="return postToGoogle();" id="Four" class="presenca">
             <h2>Confirme sua presença</h2>
             <!-- nome completo -->
             <div>
-                <input id="nome" type="text" minlength="8" placeholder="Nome Completo ...">
+                <input id="nome" type="text" minlength="8" placeholder="Nome Completo ..." name="entry.1931910532">
             </div>
             <!-- telefone -->
             <div>
-                <input id="telefone" type="text" pattern="\([0-9]{2}\) [0-9]{5}\-[0-9]{4}" maxlength="15"  placeholder="Telefone ...">
+                <input id="telefone" type="text" 
+                pattern="\([0-9]{2}\) [0-9]{5}\-[0-9]{4}" 
+                maxlength="15"  placeholder="Telefone ..."
+                name="entry.1160971757">
             </div>
             <!-- radio button -->
             <div>
-                <input id="sozinho" type="radio" name="opcoesConfirmacao">
+                <input id="sozinho" type="radio" name="entry.1411523161">
                 <label for="sozinho">Confirmo apenas minha presença</label>
-                <input id="familia" type="radio" name="opcoesConfirmacao">
+                <input id="familia" type="radio" name="entry.1411523161">
                 <label for="sozinho">Todos a quem o convite foi destinado</label>
             </div>
-            <button type="menu">Confirmar</button>
+            <button type="submit">Confirmar</button>
         </form>
 
             <div id="Five" class="contagem">
